@@ -24,7 +24,7 @@ My Disassembler attempts to parse arbitrary binary input into x86 assembly code.
 
 If you go to my github page and get one of the examples, we'll use example1.o binary file in the breakdown below.
 
-> https://github.com/anthonys-io/Linear-x86-Disassembler
+> https://github.com/Techryptic/Linear-x86-Disassembler
 
 
 To start off, example.o nasm file would be:
@@ -149,5 +149,5 @@ Putting it all together following the intel instruction:
 I hope you get the initial idea!
 It was fun writing ***6,776*** lines of code.
 
->  **https://github.com/anthonys-io/Linear-x86-Disassembler/blob/master/disasm.py**
+>  **https://github.com/Techryptic/Linear-x86-Disassembler/blob/master/disasm.py**
 
