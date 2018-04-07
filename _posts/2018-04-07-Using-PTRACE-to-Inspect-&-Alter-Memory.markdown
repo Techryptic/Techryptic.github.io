@@ -75,7 +75,7 @@ int main ( int argc, char ** argv )
 
 You'll need to compile the program: **gcc -o Traceme Traceme.c**
 
-```bash
+```javascript
 root@techryptic:~/Desktop/tmp# ./Traceme
 My pid..2555
 Press any key to continue...
@@ -162,7 +162,7 @@ You'll need to compile the program: **gcc -o Tracer Tracer.c**
 
 When you run the Tracer program with the PID from trace me, it will be waiting on Getting Registers as seen below.
 
-```bash
+```javascript
 root@techryptic:~/Desktop/tmp# ./Tracer 2555
 Getting Registers
 ```
@@ -170,7 +170,7 @@ From here you'll need to go back to **./Traceme** terminal and '**Press any key 
 
 Look back at the **./Tracer** terminal window, you'll now see a flow of data coming in as seen above.
 
-```bash
+```javascript
 root@techryptic:~/Desktop/tmp# ./Tracer 2555
 Getting Registers
 RAX:	fffffffffffffe00
