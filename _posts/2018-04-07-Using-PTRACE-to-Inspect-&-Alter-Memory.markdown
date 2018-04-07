@@ -25,12 +25,14 @@ The traced process is sent a SIGSTOP, so we can examine and modify the process a
 
 From here I utilize the ptrace_getregs to get the registers for me. SingleStep tells the kernel to stop the child at each instruction and let the parent take control. To get the arguments of the system call you have to read the registers one by one. For that you need to know which registers will be storing which parameters of the system call.
 
-> regs.rdi - Stores the first argument
-> regs.rsi - Stores the second argument
-> regs.rdx - Stores the third argument
-> regs.r10 - Stores the fourth argument
-> regs.r8 - Stores the fifth argument
-> regs.r9 - Stores the sixth argument
+ - regs.rdi - Stores the first argument
+ - regs.rsi - Stores the second argument
+ - regs.rdx - Stores the third argument
+ - regs.r10 - Stores the fourth argument
+ - regs.r8 - Stores the fifth argument
+ - regs.r9 - Stores the sixth argument
+ 
+ ---
 
 # ./Traceme
 The code below is for the traceme program, I will be tracing this program using the ptrace() API to single step and trace ALL system calls.
@@ -79,6 +81,8 @@ My pid..2555
 Press any key to continue...
 ```
 When you run the program , it will display the pid. Before we press a key to continue, we'll need to run that pid in ./Tracer below.
+
+---
 
 # ./Tracer
 
