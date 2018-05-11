@@ -82,6 +82,15 @@ layout: default
         			</div>
                 </section>
                 {% endif %}
+
+                {% if site.friends %}
+                <hr>
+                <ul class="list-inline">
+                    {% for friend in site.friends %}
+                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
         </div>
     </div>
