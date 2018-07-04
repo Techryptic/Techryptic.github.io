@@ -6,7 +6,7 @@ date:       2018-06-27
 author:     "Tech"
 header-img: "img/post-googlectf18.png"
 tags:
-    - ctf
+    - CTF
     - Reverse Engineering
     - Programming
     - Encryption
