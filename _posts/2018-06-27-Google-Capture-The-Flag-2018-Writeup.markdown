@@ -2,7 +2,7 @@
 layout:     post
 title:      "Google Capture The Flag 2018"
 #subtitle:   "ctf"
-date:       2018-06-03
+date:       2018-06-27
 author:     "Tech"
 header-img: "img/post-googlectf18.png"
 tags:
@@ -16,6 +16,7 @@ tags:
 For this challenge, you'll need to rename the file to a .pdf and open it with any pdf viewer. Copy the blacked-out text and paste it into any text editor. The flag is in the password field.
 
 ```CTF{ICanReadDis}```
+
 ---
 ---
 
@@ -26,6 +27,7 @@ Socat serving man page of socat with less.  Use ! to execute commands.  Can’t 
 #!/bin/sh echo 'Disabling DMZ using password CTF{SOmething-CATastr0phic}' echo CTF{SOmething-CATastr0phic} > /dev/dmz
 
 ```CTF{S0mething-CATastr0phic}```
+
 ---
 ---
 
@@ -92,6 +94,7 @@ https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex',
 If you use xxd on foo.ico you see that there is a zip file in there (PK magic number).  Use foremost to carve and open the zip. Inside is a driver.txt file with the flag:
 
 ```CTF{qeY80sU6Ktko8BJW}```
+
 ---
 ---
 
@@ -112,6 +115,7 @@ BHM_vkxwxgmbtel.iwy\ \(wxexmxw\) Pbgmxkfnmxw
 Yhhutgbsxk9000_Ftgnte.iwy Pbgmxkfnmxw
 yhh.bvh Mnkuh
 Lbgvx px mtdx lxvnkbmr oxkr lxkbhnler tgw bg hkwxk mh ikhmxvm rhn tztbglm onegxktubebmbxl ebdx xytbe tgw tfwyetpl, px'kx lxgwbgz rhn rhnk vkxwxgmbtel nlbgz max mbfx-ikhoxg fbebmtkr-zktwx vtxltk lrffxmkbv vbiaxkAtiir bWkhiWkbobgz!
+
 ```
 Here's a quick python script to decode the text:
 ```python
@@ -140,9 +144,11 @@ while i < len(orig_text):
   i += 1
 print(new_text)
 ```
+
 After you decode it, flag is:
 
 ```CTF{caesarcipherisasubstitutioncipher}```
+
 ---
 ---
 
@@ -152,6 +158,7 @@ After you decode it, flag is:
 Using Johntheripper, Grabbed & Compiled source (debian's didn't seem to have zip functionality). Following instructions to get the hash from the zip and then running john against the hash cracked the password to 'asdf'. Extracting with password gives key:
 
 ```CTF{CompressionIsNotEncryption}```
+
 ---
 ---
 
@@ -161,6 +168,7 @@ Using Johntheripper, Grabbed & Compiled source (debian's didn't seem to have zip
 Download the attached zip file.  Extracting gives it as an ext4 extension.  Mounting the file shows a file ```'.mediapc_backdoor_password.gz'``` in root of mounted filesystem.  Gunzip'ing it (zcat would have worked I guess) outputs text file with key:
 
 ```CTF{I_kn0W_tH15_Fs}```
+
 ---
 ---
 
@@ -170,5 +178,6 @@ Download the attached zip file.  Extracting gives it as an ext4 extension.  Moun
 A zip, of course; inspecting the extracted file, looks to be a binary. chmod+x & run binary. simple program, wants username & password.  inspecting output of 'objdump' finds password "0n3_W4rM" and possible password "zLl1ks_d4m_T0g_I"  -- stuck for a long time.  password is reversed:  "I_g0T_m4d_sk1lLz"
 
 ```CTF{I_g0T_m4d_sk1lLz}```
+
 ---
 ---
