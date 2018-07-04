@@ -7,6 +7,10 @@ author:     "Tech"
 header-img: "img/post-googlectf18.png"
 tags:
     - ctf
+    - Reverse Engineering
+    - Programming
+    - Encryption
+    - Linux
 ---
 
 ![](/img/in-post/post-js-version/googlectf-letter.png)
