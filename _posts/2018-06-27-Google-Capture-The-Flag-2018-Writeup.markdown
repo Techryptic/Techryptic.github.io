@@ -6,7 +6,7 @@ date:       2018-06-27
 author:     "Tech"
 header-img: "img/post-googlectf18.png"
 tags:
-    - Linux
+    - ctf
 ---
 
 ![](/img/in-post/post-js-version/googlectf-letter.png)
@@ -40,6 +40,7 @@ You select  ```../../../proc/self/environ```  ```../../../proc/self/cmdline```  
 
 
 Opening it in IDA, when we go to the function :
+
 ```c
 void __cdecl secondary_login()
 {
@@ -75,6 +76,7 @@ void __cdecl secondary_login()
   command_line();
 }
 ```
+
 From here we can see a few things:
     - Password must be 35 characters long
     - Password XOR with ```0xC7```
