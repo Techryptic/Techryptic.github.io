@@ -23,7 +23,7 @@ For this challenge, you'll need to rename the file to a .pdf and open it with an
 ![](/img/in-post/post-js-version/googlectf-moar.png)
 
 # MOAR Challenge:
-Socat serving man page of socat with less.  Use ! to execute commands.  Can’t !/bin/sh but can do things like !whoami (moar)  !cat /home/moar/*
+Socat serving man page of socat with less.  Use ! to execute commands.  Can’t `!/bin/sh` but can do things like `!whoami` (moar)  `!cat /home/moar/*`
 #!/bin/sh echo 'Disabling DMZ using password CTF{SOmething-CATastr0phic}' echo CTF{SOmething-CATastr0phic} > /dev/dmz
 
 `CTF{S0mething-CATastr0phic}`
@@ -36,7 +36,7 @@ Socat serving man page of socat with less.  Use ! to execute commands.  Can’t 
 # Admin UI Challenge:
 Restricted shell - first function is blocked by password, and second has directory traversal.
 
-You select  ```../../../proc/self/environ```  ```../../../proc/self/cmdline```  running program is ```./main  ../main``` returns the file.  Extract with Wireshark.  Look at it in IDA.  ``` void __cdecl primary_login…
+You select  ```../../../proc/self/environ```  ```../../../proc/self/cmdline```  running program is ```./main  ../main``` returns the file.  Extract with Wireshark.  Look at it in IDA.  `void __cdecl primary_login…`
 
 
 Opening it in IDA, when we go to the function :
@@ -78,13 +78,13 @@ void __cdecl secondary_login()
 ```
 
 From here we can see a few things:
-    - Password must be 35 characters long
-    - Password XOR with ```0xC7```
-    - FLAG is in binary at ```41414A40```
+* Password must be 35 characters long
+ * Password XOR with ```0xC7```
+* FLAG is in binary at ```41414A40```
 
 I like to use cyberchef when working on CTFs, from here we can get the flag:
 
-https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex','string':'C7'%7D,'Standard',false)&input=IDg0IDkzIDgxIEJDIDkzIEIwIEE4IDk4ICA5NyBBNiBCNCA5NCBCMCBBOCBCNSA4MwogQkQgOTggODUgQTIgQjMgQjMgQTIgQjUgIDk4IEIzIEFGIEYzIEE5IDk4IEY2IDk4CiBBQyBGOCBCQSA
+>  [https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex','string':'C7'%7D,'Standard',false)&input=IDg0IDkzIDgxIEJDIDkzIEIwIEE4IDk4ICA5NyBBNiBCNCA5NCBCMCBBOCBCNSA4MwogQkQgOTggODUgQTIgQjMgQjMgQTIgQjUgIDk4IEIzIEFGIEYzIEE5IDk4IEY2IDk4CiBBQyBGOCBCQSA](https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex','string':'C7'%7D,'Standard',false)&input=IDg0IDkzIDgxIEJDIDkzIEIwIEE4IDk4ICA5NyBBNiBCNCA5NCBCMCBBOCBCNSA4MwogQkQgOTggODUgQTIgQjMgQjMgQTIgQjUgIDk4IEIzIEFGIEYzIEE5IDk4IEY2IDk4CiBBQyBGOCBCQSA)
 
 `CTF{Two_PasSworDz_Better_th4n_1_k?}`
 ---
@@ -93,7 +93,7 @@ https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex',
 ![](/img/in-post/post-js-version/googlectf-floppy.png)
 
 # FLOPPY Challenge:
-If you use xxd on foo.ico you see that there is a zip file in there (PK magic number).  Use foremost to carve and open the zip. Inside is a driver.txt file with the flag:
+If you use `xxd` on foo.ico you see that there is a zip file in there (PK magic number).  Use `foremost` to carve and open the zip. Inside is a driver.txt file with the flag:
 
 `CTF{qeY80sU6Ktko8BJW}`
 
@@ -157,7 +157,7 @@ After you decode it, flag is:
 ![](/img/in-post/post-js-version/googlectf-obscurity.png)
 
 # Security by Obscurity
-Using Johntheripper, Grabbed & Compiled source (debian's didn't seem to have zip functionality). Following instructions to get the hash from the zip and then running john against the hash cracked the password to 'asdf'. Extracting with password gives key:
+Using `Johntheripper`, Grabbed & Compiled source (debian's didn't seem to have zip functionality). Following instructions to get the hash from the zip and then running john against the hash cracked the password to 'asdf'. Extracting with password gives key:
 
 `CTF{CompressionIsNotEncryption}`
 
@@ -167,7 +167,7 @@ Using Johntheripper, Grabbed & Compiled source (debian's didn't seem to have zip
 ![](/img/in-post/post-js-version/googlectf-firmware.png)
 
 # Firmware
-Download the attached zip file.  Extracting gives it as an ext4 extension.  Mounting the file shows a file ```'.mediapc_backdoor_password.gz'``` in root of mounted filesystem.  Gunzip'ing it (zcat would have worked I guess) outputs text file with key:
+Download the attached zip file.  Extracting gives it as an `ext4` extension.  Mounting the file shows a file ```'.mediapc_backdoor_password.gz'``` in root of mounted filesystem.  Gunzip'ing it (zcat would have worked I guess) outputs text file with key:
 
 `CTF{I_kn0W_tH15_Fs}`
 
@@ -177,7 +177,7 @@ Download the attached zip file.  Extracting gives it as an ext4 extension.  Moun
 ![](/img/in-post/post-js-version/googlectf-gatekeeper.png)
 
 # GATEKEEPER Challenge: (Reverse Engineering)
-A zip, of course; inspecting the extracted file, looks to be a binary. chmod+x & run binary. simple program, wants username & password.  inspecting output of 'objdump' finds password "0n3_W4rM" and possible password "zLl1ks_d4m_T0g_I"  -- stuck for a long time.  password is reversed:  "I_g0T_m4d_sk1lLz"
+A zip, of course; inspecting the extracted file, looks to be a binary. `chmod+x` & run binary. simple program, wants username & password.  inspecting output of `'objdump'` finds password "0n3_W4rM" and possible password "zLl1ks_d4m_T0g_I"  -- stuck for a long time. Password is reversed:  "I_g0T_m4d_sk1lLz"
 
 `CTF{I_g0T_m4d_sk1lLz}`
 
