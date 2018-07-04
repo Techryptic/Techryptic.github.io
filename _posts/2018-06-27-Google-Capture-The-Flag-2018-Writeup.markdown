@@ -87,6 +87,7 @@ I like to use cyberchef when working on CTFs, from here we can get the flag:
 >  [https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex','string':'C7'%7D,'Standard',false)&input=IDg0IDkzIDgxIEJDIDkzIEIwIEE4IDk4ICA5NyBBNiBCNCA5NCBCMCBBOCBCNSA4MwogQkQgOTggODUgQTIgQjMgQjMgQTIgQjUgIDk4IEIzIEFGIEYzIEE5IDk4IEY2IDk4CiBBQyBGOCBCQSA](https://gchq.github.io/CyberChef/#recipe=From_Hex('Space')XOR(%7B'option':'Hex','string':'C7'%7D,'Standard',false)&input=IDg0IDkzIDgxIEJDIDkzIEIwIEE4IDk4ICA5NyBBNiBCNCA5NCBCMCBBOCBCNSA4MwogQkQgOTggODUgQTIgQjMgQjMgQTIgQjUgIDk4IEIzIEFGIEYzIEE5IDk4IEY2IDk4CiBBQyBGOCBCQSA)
 
 `CTF{Two_PasSworDz_Better_th4n_1_k?}`
+
 ---
 ---
 
