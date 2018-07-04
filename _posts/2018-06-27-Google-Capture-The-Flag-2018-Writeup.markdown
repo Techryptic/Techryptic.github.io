@@ -15,7 +15,7 @@ tags:
 
 For this challenge, you'll need to rename the file to a .pdf and open it with any pdf viewer. Copy the blacked-out text and paste it into any text editor. The flag is in the password field.
 
-```CTF{ICanReadDis}```
+````CTF{ICanReadDis}````
 
 ---
 ---
