@@ -12,7 +12,7 @@ tags:
     - Linux
 ---
 
-![](/img/in-post/post-red-team-nightmare-header.png)
+![](/img/in-post/post-js-version/post-red-team-nightmare-header.png)
 
 # Red Team Nightmare (AV Bypass)  :
 You made your way into an interactive box, where you need to use some privilege escalation techniques to gain system. This isn't a post about the various techniques, but it's about evading the anti-virus for your engagement (From going interactive to active).
@@ -219,4 +219,4 @@ os.system("rm wrap.c | rm payload.c")
 print "█ "+G+"FINISHED"+W+"..."+W
 ```
 
-![](/img/in-post/post-red-team-nightmare-virustotal_results.png)
+![](/img/in-post/post-js-version/post-red-team-nightmare-virustotal_results.png)
