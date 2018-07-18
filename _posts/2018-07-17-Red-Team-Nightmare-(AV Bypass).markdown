@@ -21,7 +21,8 @@ The usual top applications would be veil-framework or cobalt-strike. The issue w
 
 My goal wasn't to get 0/64 on virustotal, but to bypass the top tier AV providers (Avast, ESET, Malwarebytes, McAfee, Sophos AV) and continue with our engagement.
 
->`With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.`
+`With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.`
+
 ### Breakdown:
 
 When you use Veil/Cobalt-Strike/Metaspolit to create your executable, it will first generate a shellcode and than find it's corresponding executable file where the application will inject the shellcode in the 'Payload' memory address of the executable. This 'Payload' memory address allocates a buffer of usually 4096 bytes and starts with the string 'Payload', not really hiding what it is.
