@@ -21,9 +21,11 @@ The usual top applications would be veil-framework or cobalt-strike. The issue w
 
 My goal wasn't to get 0/64 on virustotal, but to bypass the top tier AV providers (Avast, ESET, Malwarebytes, McAfee, Sophos AV) and continue with our engagement.
 
->`With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.`
+>With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.
 
-### Breakdown:
+---
+
+# Breakdown:
 
 When you use Veil/Cobalt-Strike/Metaspolit to create your executable, it will first generate a shellcode and than find it's corresponding executable file where the application will inject the shellcode in the 'Payload' memory address of the executable. This 'Payload' memory address allocates a buffer of usually 4096 bytes and starts with the string 'Payload', not really hiding what it is.
 
@@ -31,13 +33,13 @@ From doing numerous testing, I modified the service executable's template to all
 
 Moving Forward, by default a buffer of 4096 is automatically set with the heading 'Payload', if your shellcode is less than that (`It will be by far`), it will than nopsled it's way to the end. AV can set a signature of X amount of A's (nopsled). What I did instead will take the shellcode size, and make that the default buffer space, nops not needed.
 
-##### Quick overview of what I changed:
+### Quick overview of what I changed:
 
 - Shellcode directly into C file to be compiled.
 - No preset  allocate buffer
 - Randomized various variables and function names, changes every compile.
 
-### AV_Bypass.py
+# AV_Bypass.py
 
 With all that said, I created a python script that can do the above very seamlessly. It will request an `IP` and `PORT` to callback to, make a shellcode, inject it into a set template, and compile the service executable for you all in one go.
 
@@ -45,11 +47,13 @@ The callback can either be a meterpreter shell, or cobalt-strike beacon.
 
 The script is located at my github: [https://github.com/Techryptic/AV_Bypass](https://github.com/Techryptic/AV_Bypass)
 
-##### Prerequisites:
+### Prerequisites:
 - msfvenom
 - i686-w64-mingw32-gcc
 
-#### Windows Side of things:
+---
+
+# Windows Side of things:
 
 With the newly created Windows Service Executable, you can create a Windows service on the box with:
 ```bash
@@ -72,7 +76,7 @@ Just want to make another note that there is a `difference` between a regular Wi
 
 ---
 
-## Breakdown:
+# Breakdown:
 I have attached the script below as a quick reference, I would== highly suggest getting it directly from my github page for the most updated version==. I do have a list of awesome bypass methods I would like to add in the future.
 
 The script is located at my github: [https://github.com/Techryptic/AV_Bypass](https://github.com/Techryptic/AV_Bypass)
