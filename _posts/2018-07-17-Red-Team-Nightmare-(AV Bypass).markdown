@@ -21,7 +21,7 @@ The usual top applications would be veil-framework or cobalt-strike. The issue w
 
 My goal wasn't to get 0/64 on virustotal, but to bypass the top tier AV providers (Avast, ESET, Malwarebytes, McAfee, Sophos AV) and continue with our engagement.
 
-`With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.`
+>`With the modifications done below, the service executable gets about **15/64** on virustotal, and also pass all of the top tier providers above.`
 
 ### Breakdown:
 
@@ -29,7 +29,7 @@ When you use Veil/Cobalt-Strike/Metaspolit to create your executable, it will fi
 
 From doing numerous testing, I modified the service executable's template to allow for the shellcode to not be 'injected' into the skeletons buffer (as told above), but more of adding it directly to the 'C' file itself.
 
-Moving Forward, by default a buffer of 4096 is automatically set with the heading 'Payload', if your shellcode is less than that (It will be by far), it will than nopsled it's way to the end. AV can set a signature of X amount of A's (nopsled). What I did instead will take the shellcode size, and make that the default buffer space, nops not needed.
+Moving Forward, by default a buffer of 4096 is automatically set with the heading 'Payload', if your shellcode is less than that (`It will be by far`), it will than nopsled it's way to the end. AV can set a signature of X amount of A's (nopsled). What I did instead will take the shellcode size, and make that the default buffer space, nops not needed.
 
 ##### Quick overview of what I changed:
 
@@ -39,7 +39,7 @@ Moving Forward, by default a buffer of 4096 is automatically set with the headin
 
 ### AV_Bypass.py
 
-With all that said, I created a python script that can do the above very seamlessly. It will request an IP and PORT to callback to, make a shellcode, inject it into a set template, and compile the service executable for you all in one go.
+With all that said, I created a python script that can do the above very seamlessly. It will request an `IP` and `PORT` to callback to, make a shellcode, inject it into a set template, and compile the service executable for you all in one go.
 
 The callback can either be a meterpreter shell, or cobalt-strike beacon.
 
@@ -65,7 +65,7 @@ sc start write32
 ```
 >After the service has started, check back your meterpreter shell or cobalt-strike listerner. SUCCESS!
 
-Just want to make another note that there is a difference between a regular Windows Exectuable and a Windows Service Executable.
+Just want to make another note that there is a `difference` between a regular Windows Exectuable and a Windows Service Executable.
 
 - **Windows EXE** is a Windows executable.
 - **Windows Service EXE** is a Windows executable that responds to Service Control Manager commands. You may use this executable to create a Windows service with sc or as a custom executable with the Metasploit® Framework's PsExec modules.
