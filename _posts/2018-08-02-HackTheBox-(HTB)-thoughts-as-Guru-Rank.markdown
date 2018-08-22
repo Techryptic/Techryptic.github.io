@@ -18,7 +18,7 @@ tags:
 
 Here are my random thoughts on HackTheBox, which will be known as HTB for the rest of the post.
 
-##Background:
+## Background:
 I completed the Offensive Security Certified Professional (OSCP) last year spring time. I shortly followed that by getting SecurityTube Linux Assembly Expert (SLAE), which started my prepration for Offensive Security Certified Expert (OSCE). During my SLAE course, I signed up for HTB as every other twitter post was about it. I solved two challenges and never logged back in. A few months go by and after drowning in OSCE prep, I needed a change of paste from living in shellcode all day. Under those circumstance, my official HTB journey began..
 
 ---
@@ -68,7 +68,7 @@ Someone on HTB once said:
 
 These are not ALL going to be applicable in the real world but they are important to the creative thinking and other aspects of what pen-testing involves and therefore still worth your time to do them.
 
-##Overall
+## Overall
 This field were all in is everlearning. I believe HackTheBox is a great platform for all types of skill levels and even OSCP holders. They have a wide varity of machines for all levels of skill. I personally learn quite a few things and would like to leave some commands here..
 
 ```
