@@ -4,7 +4,7 @@ title:      "HackTheBox (HTB) thoughts as Guru Rank"
 #subtitle:   "Pentesting"
 date:       2018-08-02
 author:     "Tech"
-header-img: "img/htb_final.png"
+header-img: "img/htb_final_dark.png"
 tags:
     - RedTeam
     - Pentesting
