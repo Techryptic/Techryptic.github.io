@@ -12,7 +12,7 @@ tags:
     - Linux
 ---
 
-![](img/htb_final.png)
+![](/img/in-post/post-js-version/htb_final.png)
 
 # HackTheBox (HTB) thoughts as Guru Rank :
 
