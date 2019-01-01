@@ -194,7 +194,7 @@ The code below will make a webserver on your host machine, which another machine
 
 <https://github.com/Techryptic/Random-Scripts/blob/master/No-Access-Upload.php>
 
-
+---------
 
 ![](/img/in-post/post-js-version/osce-certs.png)
 
