@@ -29,8 +29,8 @@ Some background, I was ecstatic to finish my exam + writeup in just under the 24
 
 If you don't know C, I'd just go through the whole thing. I'd start here, so you can make some sense of the assembly you'll learn in the following course). Second link is a great primer on x86 ASM.
 
-https://users.cs.cf.ac.uk/Dave.Marshall/C/ 
-http://opensecuritytraining.info/IntroX86.html
+<https://users.cs.cf.ac.uk/Dave.Marshall/C/>
+<http://opensecuritytraining.info/IntroX86.html>
 
 
 
