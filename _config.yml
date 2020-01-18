@@ -35,7 +35,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "<b><h2><font color=red>This is some text</font>OSWE, OSCE, OSCP, OSWP Certified</h2></b>, Technology Enthusiast, CTF Player, Vulnerability Research, Reverse Engineering, Pen-Testing, and other."
+sidebar-about-description: "<b><h3><font color=39a5a2>OSWE</font>, <font color=497c50>OSCE</font>, <font color=a33e01>OSCP</font>, <font color=003b8e>OSWP</font> <font color=black>Certified.</font></h3></b>, Technology Enthusiast, CTF Player, Vulnerability Research, Reverse Engineering, Pen-Testing, and other."
 sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
