@@ -12,7 +12,9 @@ tags:
 
 --------
 
-BLE-APT develops a ‘digital fingerprint’ to identify BLE devices using MAC address randomization for security. That is, given a BLE device with a continually changing MAC address, identify digital and physical features from packet transmissions that could be used as a digital fingerprint to say this is device A.
+BLE-APT develops a ‘digital fingerprint’ to identify BLE devices using MAC address randomization for security. That is, given a BLE device with a continually changing MAC address, identify digital and physical features from packet transmissions that could be used as a digital fingerprint to say this is device X.
+
+Although BLE has security & privacy mechanisms built into the protocol, this project shows that you can fingerprint and track BLE devices. BLE devices (Fitbits, Apple Watch, ect.) are always sending out packets, even when not connected to it's central device. Abusing this as shown below, can enable you to do positional tracking of devices. 
 
 ### Requirements
 
