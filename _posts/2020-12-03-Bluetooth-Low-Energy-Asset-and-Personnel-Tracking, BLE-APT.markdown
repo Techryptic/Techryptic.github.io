@@ -41,20 +41,22 @@ Main.py will be the start of the collection. It's broken in two parts, **input f
 
 If going the input route, you'll run the following command:
 
-* ubertooth-btle -fI -r example.pcapng | sed -e 's|["'\'']||g' | xargs | sed -e 's/systime/\nsystime/g' >> example.txt
+```bash
+ubertooth-btle -fI -r example.pcapng | sed -e 's|["'\'']||g' | xargs | sed -e 's/systime/\nsystime/g' >> example.txt
+```
 
 Essentially, ubertooth is running with the follow option and exporting to example.pcapng, that information is pipped to sed & xargs and back to sed for some cleanup and finally writing to example.txt. Example.txt would be the input file for Main.py.
-
-* python3.8 Main.py input example.txt output.csv
-
+```bash
+python3.8 Main.py input example.txt output.csv
+```
 If going the live capture route, you'll run the following command (same as above):
-
+```bash
 * ubertooth-btle -fI -r example.pcapng | sed -e 's|["'\'']||g' | xargs | sed -e 's/systime/\nsystime/g' >> example.txt
-
+```
 and within another terminal you'll run the follow simultaneously:
-
+```bash
 * python3.8 Main.py live example.txt output.csv
-
+```
 
 
 ------
@@ -134,9 +136,9 @@ From my testing, we notice a reduction in noise values at 80%. This all adds to 
 ##### Script
 
 Machine-Learning.py will be second script to run. This script takes two arguments, **input** and **output**.
-
-> python3.8 Machine-Learning.py output.csv ml-output.csv
-
+```bash
+python3.8 Machine-Learning.py output.csv ml-output.csv
+```
 This script will create four additional columns: 
 
 1. Local_Name_ML
@@ -145,8 +147,6 @@ This script will create four additional columns:
 4. ScanA_ML
 
 With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 30 seconds to process the output. 
-
-
 
 ------
 
@@ -184,8 +184,6 @@ if any([substring in InitA_ml for substring in matches]):
 
 We're first only doing this check against MAC addresses that are public. Random addresses wouldn't have an association with IEEE. From there, we're spiting the first three octets and running that against the check function, which will see for any matches. If there is a match, the CompanyName parameter is returned and used to replace the first three octets with the company name's first eight characters. This process is repeated for all fields with mac addresses and all ML fields with mac addresses: AdvA, InitA, ScanA, Adva_ML, InitA_ML, ScanA_ML.
 
-
-
 ![](/img/in-post/post-js-version/btle/mac-changer.png)
 
 > **Image Description:** We can see that Logitech and Samsung replaced the alpha-numeric characters.
@@ -193,11 +191,10 @@ We're first only doing this check against MAC addresses that are public. Random 
 ##### Script
 
 Mac-Changer.py will be third script to run. This script takes two arguments, **input** and **output**.
-
-> python3.8 Mac-Changer.py ml-output.csv mac-ml-output.csv 
-
+```bash
+python3.8 Mac-Changer.py ml-output.csv mac-ml-output.csv 
+```
 With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 20 minutes to process the output. 
-
 
 
 ------
@@ -229,10 +226,10 @@ In this example, the MAC 86:2A and 68:6A have 157 different packets with each ot
 ##### Nodes
 
 The Nodes are output necessary foundational information. Circling back to the beginning with the original collection: RSSI, PDU Type, Manufacturer are all part of the original packet. Essentially, this portion is going through all .
-
+```bash
 > 86:2a:fd:42:f2:ee (public), -87, SCAN_REQ:456, ADV_DIRECT_IND:3, Manufacturer Name
 > 68:6a:e8:2d:93:b4 (random), -87.0, SCAN_REQ:4479, ADV_DIRECT_IND:11, Apple. Inc.
-
+```
 A few things are going on here. First, it's taking the MAC address and going through the overall CSV document to find all MAC associations and all RSSI values. It will follow up and calculate the Median value for RSSI. In this example, it's -87. 
 
 The second portion is doing the same, going through the document where that MAC address had any association with various PDU_Types, calculating and giving you the # of times it called that PDU packet. In the example above, the SCAN_REQ PDU type was sent 456 times from the first MAC address.  
@@ -242,6 +239,9 @@ The Last part lists all associated Manufacturer that was collected; it will grou
 ##### Script
 
 Graphs.py will be fourth script to run. This script takes one arguments, **input**.
+```bash
+python3.8 Graphys.py
+```
 
 > With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 15 minutes to process the output. 
 
@@ -268,9 +268,9 @@ The last bit would be when you highlight a Mac Address, and it will give you all
 ##### Script
 
 Web.py will be the last script to run. This script takes no arguments. Both **graph-Edges.csv** & **graph-Nodes.csv** would need to be in the same directory as Web.py
-
-> python3.8 Web.py
-
+```bash
+python3.8 Web.py
+```
 The web server has two excellent filters, MAC address search, and Packet Filtering. Mac Address Search will center whichever packet that is being searched. Packet Filtering sets the threshold for what kinds of packets to show; in this case, it's anything more than five packets. If set to 1, the graph might not be readable as it will showcase every packet. In this case, 1 million will be showcased and might crash our system. Packet filtering defaults at five or more packets (transactions), and it will be displayed.
 
 
