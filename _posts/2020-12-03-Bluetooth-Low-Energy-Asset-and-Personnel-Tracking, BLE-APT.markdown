@@ -8,13 +8,13 @@ tags:
     - Bluetooth
 ---
 
-## Bluetooth Low Energy Asset and Personnel Tracking, BLE-APT
+# Bluetooth Low Energy Asset and Personnel Tracking, BLE-APT
 
 --------
 
 BLE-APT develops a ‘digital fingerprint’ to identify BLE devices using MAC address randomization for security. That is, given a BLE device with a continually changing MAC address, identify digital and physical features from packet transmissions that could be used as a digital fingerprint to say this is device A.
 
-##### Requirements
+### Requirements
 
 ```bash
 Ubertooth One
@@ -35,7 +35,7 @@ ubertooth
 
 ------
 
-### Main.py ::
+## Main.py ::
 
 Main.py will be the start of the collection. It's broken in two parts, **input file** or **live capture**.
 
@@ -61,9 +61,9 @@ and within another terminal you'll run the follow simultaneously:
 
 ------
 
-### Machine-Learning.py ::
+## Machine-Learning.py ::
 
-##### Background
+### Background
 
 Bluetooth low energy packets tend to switch a few bytes here and there. These slight changes usually happen in fields that we need to know if they are false positives or true negatives. With that said, there's a concentration on the AdvA Addresses, ScanA addresses, and local names.
 
@@ -133,7 +133,7 @@ All values within the three main MAC address fields (AdvA, InitA, ScanA) are gro
 
 From my testing, we notice a reduction in noise values at 80%. This all adds to the bigger picture down the line when we plot these values against a graph. 
 
-##### Script
+### Script
 
 Machine-Learning.py will be second script to run. This script takes two arguments, **input** and **output**.
 ```bash
@@ -150,9 +150,9 @@ With processing 1 million packets capture and with a regular Ubuntu workstation,
 
 ------
 
-### Mac-Changer.py ::
+## Mac-Changer.py ::
 
-##### Background
+### Background
 
 MAC stands for Media Access Control.  You can think of it as a unique identifier for an electronic device connecting to a network, like a VIN for a car on a freeway of other vehicles. A Bluetooth address, sometimes introduced to as a Bluetooth MAC address, is a 48-bit value that uniquely distinguishes a Bluetooth device. There are two main types of Bluetooth addresses: **Public** & **Random**.
 
@@ -188,7 +188,7 @@ We're first only doing this check against MAC addresses that are public. Random 
 
 > **Image Description:** We can see that Logitech and Samsung replaced the alpha-numeric characters.
 
-##### Script
+### Script
 
 Mac-Changer.py will be third script to run. This script takes two arguments, **input** and **output**.
 ```bash
@@ -199,9 +199,9 @@ With processing 1 million packets capture and with a regular Ubuntu workstation,
 
 ------
 
-### Graphs.py ::
+## Graphs.py ::
 
-##### Background
+### Background
 
 Network diagrams (also called Graphs) show interconnections between a set of entities. Each entity is represented by a Node (or vertice). Connections between nodes are represented through links (or edges). The graph is a force directed by assigning a weight (force) from the node edges, and the other interconnected nodes get assigned a weighted factor. 
 
@@ -213,7 +213,7 @@ BTLE packets will always have the AdvA (Advertising Address) field filed out. Th
 
 This script prints out two separate files, the **edges** and **nodes**. 
 
-##### Edges
+### Edges
 
 The Edges are outputting the following information: TransactionAmt, Source, Target.
 
@@ -223,7 +223,7 @@ TransactionAmt is the number of times that that particular Source and Target pai
 
 In this example, the MAC 86:2A and 68:6A have 157 different packets with each other. This value 157 is the **weight** value used in the next script to determine the line thickness (network traffic) between two devices.
 
-##### Nodes
+### Nodes
 
 The Nodes are output necessary foundational information. Circling back to the beginning with the original collection: RSSI, PDU Type, Manufacturer are all part of the original packet. Essentially, this portion is going through all .
 ```bash
@@ -236,7 +236,7 @@ The second portion is doing the same, going through the document where that MAC 
 
 The Last part lists all associated Manufacturer that was collected; it will group them all and print it in one statement (duplicates removed).
 
-##### Script
+### Script
 
 Graphs.py will be fourth script to run. This script takes one arguments, **input**.
 ```bash
@@ -249,9 +249,9 @@ python3.8 Graphys.py
 
 ------
 
-### Web.py ::
+## Web.py ::
 
-##### Background
+### Background
 
 With the newly created Edges & Nodes file, Web.py utilizing both of these files to spin up a web-server and make an interactive Python network visualization app using NetworkX, Plotly, Dash.
 
@@ -265,7 +265,7 @@ The last bit would be when you highlight a Mac Address, and it will give you all
 
 ![](/img/in-post/post-js-version/btle/graph-info.png)
 
-##### Script
+### Script
 
 Web.py will be the last script to run. This script takes no arguments. Both **graph-Edges.csv** & **graph-Nodes.csv** would need to be in the same directory as Web.py
 ```bash
