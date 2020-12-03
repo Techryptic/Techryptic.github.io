@@ -1,3 +1,4 @@
+---
 layout:     post
 title:      "Bluetooth Low Energy Asset and Personnel Tracking, BLE-APT."
 date:       2020-12-03
@@ -5,6 +6,7 @@ author:     "Tech"
 header-img: "img/post-bluetooth.jpg"
 tags:
     - Bluetooth
+---
 
 ## Bluetooth Low Energy Asset and Personnel Tracking, BLE-APT
 
