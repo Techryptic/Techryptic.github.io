@@ -10,8 +10,7 @@ tags:
 
 # Bluetooth Low Energy Asset and Personnel Tracking, BLE-APT
 
---------
-
+## Visit my Github for the most updated code: [https://github.com/Techryptic/BLE-APT](https://github.com/Techryptic/BLE-APT)
 BLE-APT develops a ‘digital fingerprint’ to identify BLE devices using MAC address randomization for security. That is, given a BLE device with a continually changing MAC address, identify digital and physical features from packet transmissions that could be used as a digital fingerprint to say this is device X.
 
 Although BLE has security & privacy mechanisms built into the protocol, this project shows that you can fingerprint and track BLE devices. BLE devices (Fitbits, Apple Watch, ect.) are always sending out packets, even when not connected to it's central device. Abusing this as shown below, can enable you to do positional tracking of devices. 
@@ -283,3 +282,7 @@ The web server has two excellent filters, MAC address search, and Packet Filteri
 ![](/img/in-post/post-js-version/btle/BTLEAPT.png)
 
 ![](/img/in-post/post-js-version/btle/graphsANDweb.gif)
+
+## Visit my Github for the most updated code: [https://github.com/Techryptic/BLE-APT](https://github.com/Techryptic/BLE-APT)
+
+
