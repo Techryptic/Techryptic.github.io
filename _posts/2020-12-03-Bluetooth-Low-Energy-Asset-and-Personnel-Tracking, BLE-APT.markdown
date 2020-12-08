@@ -59,7 +59,7 @@ and within another terminal you'll run the follow simultaneously:
 ```bash
 * python3.8 Main.py live example.txt output.csv
 ```
-
+![](/img/in-post/post-js-version/btle/main.py.gif)
 
 ------
 
@@ -150,6 +150,8 @@ This script will create four additional columns:
 
 With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 30 seconds to process the output. 
 
+![](/img/in-post/post-js-version/btle/machine-learning.gif)
+
 ------
 
 ## Mac-Changer.py ::
@@ -198,6 +200,7 @@ python3.8 Mac-Changer.py ml-output.csv mac-ml-output.csv
 ```
 With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 20 minutes to process the output. 
 
+![](/img/in-post/post-js-version/btle/Mac-Changer.gif)
 
 ------
 
@@ -247,7 +250,7 @@ python3.8 Graphys.py
 
 > With processing 1 million packets capture and with a regular Ubuntu workstation, it took less than 15 minutes to process the output. 
 
-
+![](/img/in-post/post-js-version/btle/graphs.gif)
 
 ------
 
@@ -279,3 +282,4 @@ The web server has two excellent filters, MAC address search, and Packet Filteri
 
 ![](/img/in-post/post-js-version/btle/BTLEAPT.png)
 
+![](/img/in-post/post-js-version/btle/graphsANDweb.gif)
