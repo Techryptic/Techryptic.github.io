@@ -1,4 +1,3 @@
-```
 ---
 layout:     post
 title:      "Leading a Red Team through and through.."
@@ -9,9 +8,6 @@ tags:
     - Pentesting
     - RedTeam
 ---
-```
-
-
 
 #  Leading a Red Team through and through
 
