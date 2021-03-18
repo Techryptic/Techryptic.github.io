@@ -72,7 +72,7 @@ These tips can be used across other SIEMs, and you would need to adjust your que
 
 Title Grabber: 
 
-```
+```python
 Plugin Name: HyperText Transfer Protocol (HTTP) Information
 Plugin ID: 24260
 Plugin URL: https://www.tenable.com/plugins/nessus/24260
@@ -103,7 +103,7 @@ index=tenable daysago="30" pluginID=24260
 
 Vulns Hunt:
 
-```
+```python
 URL: https://www.tenable.com/blog/understanding-exploitability
 
 Why is this useful:
@@ -122,7 +122,7 @@ index=tenable daysago="30" expploitAvailable=Yes checkType=remote
 
 Port Scanner:
 
-```
+```python
 Plugin Name: Nessus SNMP Scanner
 Plugin ID: 14274
 Plugin URL: https://www.tenable.com/plugins/nessus/14274
