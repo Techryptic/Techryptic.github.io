@@ -66,7 +66,7 @@ It is not all about domain admins. That is one mindset of the red team that need
 
 Reflecting on what I mentioned earlier, the goal of the red team is to find any security gaps.
 
-**Splunk (with Tenable.SC data):**
+#### Splunk (with Tenable.SC data):
 
 These tips can be used across other SIEMs, and you would need to adjust your query appropriately. With all the ingested data, Tenable has some sweet Plugins which should be utilized. 
 
