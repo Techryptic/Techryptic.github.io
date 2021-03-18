@@ -130,11 +130,7 @@ Description: This plugin runs an SNMP scan against the remote machine to find op
 Plugin Name: Nessus SYN scanner
 Plugin ID: 11219
 Plugin URL: https://www.tenable.com/plugins/nessus/11219
-Description: This plugin is an SYN 'half-open' port scanner. It shall be reasonably quick even against a firewalled target. 
-Note that SYN scans are less intrusive than TCP (full connect) scans against broken services, but they might cause problems for less robust firewalls and leave unclosed connections on the remote target if the network is loaded.
-
-Why is this useful:
-	Super helpful to know which machines had what port open at any given time.  
+Description: This plugin is an SYN 'half-open' port scanner. It shall be reasonably quick even against a firewalled target.
     
 Query:
 
