@@ -70,7 +70,11 @@ Reflecting on what I mentioned earlier, the goal of the red team is to find any 
 
 These tips can be used across other SIEMs, and you would need to adjust your query appropriately. With all the ingested data, Tenable has some sweet Plugins which should be utilized. 
 
-Title Grabber: 
+**Title Grabber:**
+	We all love and used Eyewitness from Christopher Truncer, but the application has many gaps. I addressed these gaps in my version of Eyewitness called FiltrationWitness (Located on my Github). Even so, you will eventually run into issues with Certs, proxy, timeouts, legacy software, etc.
+	
+This plugin shows the HTTP request and, most notably, the HTTP response from Tenable's request. The response can be parsed in multiple ways to look for the low-hanging fruits. Some examples include parsing out the Title of the page, the redirect URL to find which appliance is running, Basic authentication cookies, etc.
+    
 
 ```python
 Plugin Name: HyperText Transfer Protocol (HTTP) Information
@@ -78,11 +82,6 @@ Plugin ID: 24260
 Plugin URL: https://www.tenable.com/plugins/nessus/24260
 Description: Some information about the remote HTTP configuration can be extracted.
 
-Why is this useful:
-	We all love and used Eyewitness from Christopher Truncer, but the application has many gaps. I addressed these gaps in my version of Eyewitness called FiltrationWitness (Located on my Github). Even so, you will eventually run into issues with Certs, proxy, timeouts, legacy software, etc.
-    
-    This plugin shows the HTTP request and, most notably, the HTTP response from Tenable's request. The response can be parsed in multiple ways to look for the low-hanging fruits. Some examples include parsing out the Title of the page, the redirect URL to find which appliance is running, Basic authentication cookies, etc.
-    
 Query:
 
 index=tenable daysago="30" pluginID=24260
@@ -101,13 +100,11 @@ index=tenable daysago="30" pluginID=24260
 
 
 
-Vulns Hunt:
+**Vulns Hunt:**
+This is a quick way to find all the exploitable machines on the network that should be fixed ASAP. Two filters we are using include exploitAvailable and checkType. We are setting the exploitAvilable value to Yes for low hanging fruits and the checkType value to remote as that vulnerability will be exploitable over the network. These vulns include Ethernal-Blue, BlueKeep, Remote Code Execution vulns, Deserialization, etc.
 
 ```python
 URL: https://www.tenable.com/blog/understanding-exploitability
-
-Why is this useful:
-	This is a quick way to find all the exploitable machines on the network that should be fixed ASAP. Two filters we are using include exploitAvailable and checkType. We are setting the exploitAvilable value to Yes for low hanging fruits and the checkType value to remote as that vulnerability will be exploitable over the network. These vulns include Ethernal-Blue, BlueKeep, Remote Code Execution vulns, Deserialization, etc.
     
 Query:
 index=tenable daysago="30" expploitAvailable=Yes checkType=remote
@@ -120,7 +117,9 @@ index=tenable daysago="30" expploitAvailable=Yes checkType=remote
 
 
 
-Port Scanner:
+**Port Scanner:**
+Super helpful to know which machines had what port open at any given time.  
+
 
 ```python
 Plugin Name: Nessus SNMP Scanner
