@@ -3,7 +3,7 @@ layout:     post
 title:      "Pokémon Shellcode Loader"
 date:       2022-07-28
 author:     "Tech"
-header-img: "img/post-pokemon.jpg"
+header-img: "img/post-pokeball.jpg"
 tags:
     - Pentesting
     - RedTeam
@@ -13,31 +13,31 @@ tags:
 #  Pokémon Shellcode Loader
 
 
-A tweet came in from @Checkymander about creating a shellcode loader from Pokémon names. Awesome fun project to mess with blue team, but there wasn't a POC! (or at least when I last checked)
+A tweet came in from @Checkymander about creating a shellcode loader from Pokémon names. Great fun project to mess with the blue team, but there wasn't a POC! (or at least when I last checked)
 
 # Let's Load Some Instructions
-There are multiple ways to do this, here is a decent way:
-If we look at a shellcode, it's a series of hex from 0x00-0xFF, or in decimal form of 0-256. There happens to be way more than 256 Pokemon that we can choose from.
+There are multiple ways to do this:
+If we look at a shellcode, it's a series of hexes from 0x00-0xFF, or in decimal form of 0-256. There happens to be way more than 256 Pokemon that we can choose from.
 
 ![](https://680730519-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FycWm23nLowYCIfLQMLG7%2Fuploads%2FQ8rpeQ1rItyYbOvE2xVl%2Fimage.png?alt=media&token=19289e61-2b90-4579-9c7f-3f8528a8f55a)
 
-From looking at the Pokemon chart above, we can translate BULBASAUR, who is #001 to 0x01 (dropping the first zero). Likewise, CHARMANDER will be represented by 0x04 and so on. Lucky null byte 0x00 can be aligned to Pokemon #257, BLAZIKEN!
+From looking at the Pokemon chart above, we can translate BULBASAUR, who is #001, to 0x01 (dropping the first zero). Likewise, CHARMANDER will be represented by 0x04 and so on. The Lucky null byte 0x00 can be aligned to Pokemon #257, BLAZIKEN!
 
-Converting shellcode too Pokemon-Shellcode is simple, how about converted Pokmeon-Shellcode to Assembly?! Do we want to have an Array within the .ASM? C code? Pull it down externally?
+Converting shellcode to Pokemon-Shellcode is simple. How about converting Pokemon-Shellcode to Assembly?! Do we want to have an Array within the .ASM? C code? Pull it down externally?
 
 Many directions to go down!
 
 # To Array or not to Array
-We need data first, I found two areas that contain both the number of the Pokemon and their name:
+We need data. First, I found two areas that contain both the number of the Pokemon and their name:
 
 > https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6
 
-and another one, that only have the name of the Pokemon. This might be more useful because we can get the array index position for a particular pokemon without carrying over a long string.
+And another one that only has the name of the Pokemon. This might be more useful because we can get the array index position for a particular pokemon without carrying over a long string.
 
 > https://github.com/sindresorhus/pokemon/blob/main/data/en.json
 
 # What's the baseline?
-Taking a regular POP CALC shellcode and throwing some C's at it.
+I am taking a regular POP CALC shellcode and throwing some C's at it.
 
 ```c++
 #include <windows.h>
@@ -84,11 +84,10 @@ void main() {
 ```
 ![](https://680730519-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FhjtCVankMBzHfXUecU9j%2Fuploads%2F7VJrtoOJZB0JKISN4fV6%2Fimage.png?alt=media&token=de3e596d-0721-4e73-aa6c-7f38addad6cb)
 
-Not bad, it's not doing anything malicious, but still... not bad.
-
+Not bad. It's not doing anything malicious, but still... not bad.
 
 # Shellcode -> Pokemon_Shellcode
-Pretty simple script that converts a shellcode byte Object into the Pokémon Shellcode.
+A simple script converts a shellcode byte Object into the Pokémon Shellcode.
 
 ```python
 import json
@@ -114,7 +113,7 @@ Fun Fact: I wanted to keep the Pokemon name aligned with their number (BULBASAUR
 
 ![](https://680730519-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FhjtCVankMBzHfXUecU9j%2Fuploads%2Frdaobk6ZBOsTau3GzYoT%2Fimage.png?alt=media&token=b92673a4-ee5f-4960-a4c5-997e8199df0f)
 
-Another issue, is that the Pokemon Farfetch'd has an apostrophe as shown below. The easy fix is just to remove it and call it: Farfetchd
+Another issue is that the Pokemon Farfetch'd have an apostrophe, as shown below. The easy fix is just to remove it and call it: Farfetchd
 
 ![](https://680730519-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FhjtCVankMBzHfXUecU9j%2Fuploads%2FxFy1aqTlmNiVl30xE5UD%2Fimage.png?alt=media&token=6fbf2ab2-69bb-4d63-a2eb-df72811afb6e)
 
@@ -230,6 +229,7 @@ void printAscii(unsigned char* index_to_hexa_array, int counter_s) {
 # Conclusion
 
 That, that's the conclusion. 
-Same code but with using pokemon yield a way better result than I thought it would.
+Same code but using pokemon yields a way better result than I thought it would.
 
+In the end, it's still a battle between Red vs. Blue
 ![](/img/post-pokemon-conclusion.gif)
