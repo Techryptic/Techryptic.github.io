@@ -13,7 +13,7 @@ tags:
 #  Pokémon Shellcode Loader
 
 > **Note #1**
-> Updated Code will be on my GitHub: https://github.com/Techryptic/Pokemon-Shellcode-Loader
+> Updated Code will be on my GitHub: [[https://github.com/Techryptic/BLE-APT](https://github.com/Techryptic/Pokemon-Shellcode-Loader)]([https://github.com/Techryptic/BLE-APT](https://github.com/Techryptic/Pokemon-Shellcode-Loader))
 
 > **Note #2**
 > GitBooks: https://techryptic.gitbook.io/pokemon-shellcode
