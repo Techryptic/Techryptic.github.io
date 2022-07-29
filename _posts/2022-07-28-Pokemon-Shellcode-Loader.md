@@ -3,7 +3,7 @@ layout:     post
 title:      "Pokémon Shellcode Loader"
 date:       2022-07-28
 author:     "Tech"
-header-img: "img/post-red-team.jpg"
+header-img: "img/post-pokemon.jpg"
 tags:
     - Pentesting
     - RedTeam
@@ -232,4 +232,4 @@ void printAscii(unsigned char* index_to_hexa_array, int counter_s) {
 That, that's the conclusion. 
 Same code but with using pokemon yield a way better result than I thought it would.
 
-![](/img/in-post/post-js-version/mr-robot.gif)
+![](/img/post-pokemon-conclusion.gif)
