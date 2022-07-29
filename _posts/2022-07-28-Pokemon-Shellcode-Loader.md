@@ -242,4 +242,5 @@ That, that's the conclusion.
 Same code but using pokemon yields a way better result than I thought it would.
 
 In the end, it's still a battle between Red vs. Blue
+
 ![](/img/post-pokemon-conclusion.gif)
