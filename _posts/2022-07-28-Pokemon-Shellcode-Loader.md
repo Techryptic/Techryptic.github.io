@@ -12,6 +12,14 @@ tags:
 
 #  Pokémon Shellcode Loader
 
+> **Note #1**
+> Updated Code will be on my GitHub: https://github.com/Techryptic/Pokemon-Shellcode-Loader
+
+> **Note #2**
+> GitBooks: https://techryptic.gitbook.io/pokemon-shellcode
+
+> **Note #3**
+> GitPages: https://techryptic.github.io/2022/07/28/Pokemon-Shellcode-Loader
 
 A tweet came in from @Checkymander about creating a shellcode loader from Pokémon names. Great fun project to mess with the blue team, but there wasn't a POC! (or at least when I last checked)
 
