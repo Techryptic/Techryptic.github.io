@@ -42,6 +42,14 @@ sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
 # Friends
 friends: [
 #    {
