@@ -17,7 +17,7 @@ Tile is a technology company specializing in Bluetooth Low Energy (BLE or Blueto
 # Tile 'Scan and Secure'
 The Scan and Secure feature enables you to quickly scan for and detect nearby Tiles and Tile-enabled devices that may be traveling with you. You can use this feature on iOS or Android, even if you do not have an active Tile account, as long as you have the latest version of the Tile app on your mobile device.
 
-> https://tileteam.zendesk.com/hc/en-us/articles/4563823537431-Tile-Scan-and-Secure-Overview
+> [](https://tileteam.zendesk.com/hc/en-us/articles/4563823537431-Tile-Scan-and-Secure-Overview)
 
 When the 'Scan and Secure' feature is initiated, it starts a 10-minute timer and activates Bluetooth and location services on the user's device. The objective of this feature is to encourage the user to move around for 10 minutes, during which the app detects any Tile devices that may be nearby. This mechanism provides a proactive approach to ensure that users are aware of any Tile devices that may be following them, thus providing an added layer of security to the user's privacy. Furthermore, by encouraging users to move around, the app increases the likelihood of detecting any Tile devices attempting to track them without their knowledge or consent.
 
@@ -29,7 +29,7 @@ As written by the company, Tile's Anti-Theft Mode can improve the chances of ret
 
 Tile has an explanatory blog post on it:
 
-> https://www.tile.com/blog/how-does-tile-anti-theft-mode-work
+> [](https://www.tile.com/blog/how-does-tile-anti-theft-mode-work)
 
 
 ## Following that, I did it!
@@ -47,6 +47,7 @@ Upon conducting a detailed analysis, it has been found that there is no noticeab
 
 * Notably, all Tile devices have the UUID16 set to the value of 0xfeed, which corresponds to the manufacturer **Tile, Inc.**
 * Tile devices advertise their Bluetooth Low Energy packet with the initial bytes set to **02:00**.
+* Below is all the features of the Tile BLE packet:
 
 
 | Feature                                      | Value                                           |
@@ -98,9 +99,9 @@ This is much personal information to share, particularly for those concerned abo
 The Anti-Theft Mode offered by Tile seems to be a mere publicity stunt, which is unsurprising given the competition posed by Apple's Airtags. However, do not let the hype blind you from reality, for only by seeing things as they are can we make informed decisions. 
 
 * **Hype** refers to the exaggerated or excessive promotion of a product, idea, or phenomenon, often done to generate excitement, interest, or buzz among the public.
-    * https://www.macrumors.com/2023/02/16/tile-anti-theft-mode/
-    * https://www.theverge.com/2023/2/17/23603989/tile-location-tracker-anti-theft-mode
-    * https://securityboulevard.com/2023/02/tile-trackers-accountability-mode/
+    * [](https://www.macrumors.com/2023/02/16/tile-anti-theft-mode/)
+    * [](https://www.theverge.com/2023/2/17/23603989/tile-location-tracker-anti-theft-mode)
+    * [](https://securityboulevard.com/2023/02/tile-trackers-accountability-mode/)
 
 * Conversely, **reality** refers to the actual state of things, free from embellishment or exaggeration. It is the truth or actual experience of something without preconceived notions or expectations.
-    * https://Bambi.ai/ - Allows you to see ALL tracking devices around you instantly. Android and IOS apps are releasing very soon!
+    * [](https://Bambi.ai/) - Allows you to see ALL tracking devices around you instantly. Android and IOS apps are releasing very soon!
