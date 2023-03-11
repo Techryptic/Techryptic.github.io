@@ -12,7 +12,7 @@ tags:
 
 Tile is a technology company specializing in Bluetooth Low Energy (BLE or Bluetooth LE) enabled trackers. With the help of these trackers, users can locate their belongings quickly via a smartphone app. [Tile](https://tile.com) offers a wide range of trackers to suit different needs, such as Tile Pro, Tile Mate, Tile Slim, and Tile Sticker. These trackers come in various sizes and shapes and can be attached to objects such as keys, wallets, and even laptops.
 
-<img src="img/in-post/post-js-version/Tile/Tile-Trackers.jpeg" width="400" style="border: 1px solid black;">
+<img src="/img/in-post/post-js-version/Tile/Tile-Trackers.jpeg" width="400" style="border: 1px solid black;">
 
 # Tile 'Scan and Secure'
 The Scan and Secure feature enables you to quickly scan for and detect nearby Tiles and Tile-enabled devices that may be traveling with you. You can use this feature on iOS or Android, even if you do not have an active Tile account, as long as you have the latest version of the Tile app on your mobile device.
@@ -35,7 +35,7 @@ Tile has an explanatory blog post on it:
 ## Following that, I did it!
 I enabled the Anti-Theft Mode on one of my four Tiles for testing purposes, and the process was seamless. However, as I discuss in my blog, I found the feature to be **pointless**.
 
-<img src="img/in-post/post-js-version/Tile/Tile-Enabled.jpeg" width="250" style="border: 1px solid black;">
+<img src="/img/in-post/post-js-version/Tile/Tile-Enabled.jpeg" width="250" style="border: 1px solid black;">
 
 
 # Separating Hype from Reality
@@ -87,7 +87,7 @@ It is worth noting that Apple AirTags, a superior product by default, has its MA
 ## 3. Anti-Theft Mode is "Hush Money" but with your Identity.
 In the world of personal privacy, a new question has emerged: Is it worth giving up personal data to avoid the public display of personal information? Tile, a company specializing in Bluetooth tracking devices, has introduced the Anti-Theft mode. This mode, when enabled, suppresses the public display of device information in the event of theft or loss.
 
-<img src="img/in-post/post-js-version/Tile/Tile-theftmode.PNG" width="" style="border: 1px solid black;">
+<img src="/img/in-post/post-js-version/Tile/Tile-theftmode.PNG" width="" style="border: 1px solid black;">
 
 Tile's Anti-Theft mode, however, is not a monetary transaction. Instead, the company requests personal information from users in exchange for the suppression of device information. This information includes the user's identity, license, or passport, a 3D scan of their entire face, and location.
 
