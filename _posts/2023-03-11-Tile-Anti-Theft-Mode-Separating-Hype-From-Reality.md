@@ -3,7 +3,7 @@ layout:     post
 title:      "Tile's Anti-Theft Mode: Separating Hype from Reality"
 date:       2023-03-11
 author:     "Tech"
-header-img: "img/in-post/post-js-version/Tile/bg_x.png"
+header-img: "/img/in-post/post-js-version/Tile/bg_x.png"
 tags:
     - Bluetooth
 ---
