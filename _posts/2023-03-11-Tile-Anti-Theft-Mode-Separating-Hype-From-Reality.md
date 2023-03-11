@@ -41,7 +41,7 @@ I enabled the Anti-Theft Mode on one of my four Tiles for testing purposes, and 
 # Separating Hype from Reality
 
 ## 1. It is visible to everyone
-It has been observed that Tile's application for both iOS and Android does not display the device with Anti-Theft Mode enabled. This particular app is an exception, as all other apps show the device with Anti-Theft Mode enabled. However, it is essential to note that despite the absence of the device on Tile's app, it can still be tracked and located through other means available on the device.
+It has been observed that Tile's application for both iOS and Android does not display the device with Anti-Theft Mode enabled. This particular app is an exception, as all other apps show the device, regardless if Anti-Theft Mode enabled or not. However, it is essential to note that despite the absence of the device on Tile's app, it can still be tracked and located through other means available on the device.
 
 Upon conducting a detailed analysis, it has been found that there is no noticeable variation in the packet values between a Tile device with Anti-Theft mode enabled and a standard Tile device. 
 
