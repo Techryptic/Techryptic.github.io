@@ -3,7 +3,7 @@ layout:     post
 title:      "Tile's Anti-Theft Mode: Separating Hype from Reality"
 date:       2023-03-11
 author:     "Tech"
-header-img: "/img/in-post/post-js-version/Tile/bg_x.png"
+header-img: "img/in-post/post-js-version/Tile/bg_x.png"
 tags:
     - Bluetooth
 ---
@@ -49,9 +49,9 @@ Upon conducting a detailed analysis, it has been found that there is no noticeab
 * Tile devices advertise their Bluetooth Low Energy packet with the initial bytes set to **02:00**.
 
 
-| Feature                                        | Value                                           |
+| Feature                                      | Value                                           |
 |----------------------------------------------|-------------------------------------------------|
-| frame.protocols                               | bluetooth:btle_rf:btle:btcommon                |
+| frame.protocols                              | bluetooth:btle_rf:btle:btcommon                 |
 | btle_rf.channel                              | 0,12,39                                         |
 | btle.advertising_header                      | 0x1b60                                          |
 | btle.advertising_header.pdu_type             | 0x00                                            |
@@ -60,11 +60,11 @@ Upon conducting a detailed analysis, it has been found that there is no noticeab
 | btle.advertising_header.randomized_tx        | 1                                               |
 | btle.advertising_header.rfu.4                | 0                                               |
 | btle.advertising_header.length               | 27                                              |
-| btle.length                                   | 27                                             |
-| btle.advertising_address                     | XX:XX:XX:XX:XX:XX                              |
+| btle.length                                  | 27                                              |
+| btle.advertising_address                     | XX:XX:XX:XX:XX:XX                               |
 | btcommon.eir_ad.advertising_data             | 0                                               |
-| btcommon.eir_ad.entry                        | 3|13|2                                          |
-| btcommon.eir_ad.entry.length                 | 0x03|0x01|0x16                                  |
+| btcommon.eir_ad.entry                        | 3,13,2                                          |
+| btcommon.eir_ad.entry.length                 | 0x03,0x01,0x16                                  |
 | btcommon.eir_ad.entry.type                   | 0x00                                            |
 | btcommon.eir_ad.entry.flags.reserved         | 0x00                                            |
 | btcommon.eir_ad.entry.flags.le_bredr_support_host | 0x01                                       |
