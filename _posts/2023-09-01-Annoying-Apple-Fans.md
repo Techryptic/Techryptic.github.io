@@ -3,13 +3,12 @@ layout:     post
 title:      "Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed"
 date:       2023-09-01
 author:     "Tech"
-header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.png"
+header-img: "img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4"
 tags:
     - Bluetooth
 ---
-
 #  Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed
-
+header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.png"
 The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless communication, has been instrumental in enabling seamless interactions between devices. Its advertising packets, in particular, are broadcast signals that devices use to announce their presence and capabilities. Apple's ecosystem, with its myriad of interconnected devices, heavily relies on these packets for functionalities ranging from AirDrop file transfers to Apple Watch connectivity.
 
 In November 2022, I released a YouTube video discussing AirTag spoofing. We're going to extend that to other services.
@@ -57,7 +56,7 @@ In conclusion, ADV packets in BLE are crucial for many of Apple's features. Appl
 
 # Flipper Zero Bluetooth Prank Revealed
 
-<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' width=800 autoplay muted></video>
+<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' width=800 autoplay muted loop></video>
 
 Enter the Flipper Zero, a multi-tool device for hackers and tinkerers. One of its capabilities is to interact with BLE protocols, and more specifically, to mimic or spoof these advertising packets.
 
