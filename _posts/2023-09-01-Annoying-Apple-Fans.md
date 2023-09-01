@@ -57,7 +57,7 @@ In conclusion, ADV packets in BLE are crucial for many of Apple's features. Appl
 
 # Flipper Zero Bluetooth Prank Revealed
 
-<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' width=180 autoplay muted></video>
+<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' width=800 autoplay muted></video>
 
 Enter the Flipper Zero, a multi-tool device for hackers and tinkerers. One of its capabilities is to interact with BLE protocols, and more specifically, to mimic or spoof these advertising packets.
 
