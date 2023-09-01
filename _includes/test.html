@@ -13,10 +13,31 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        .container {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
+	.container {
+	    /* Smooth, broad shadow for a more modern, 'floating' look */
+	    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+	    
+	    /* Border radius for slightly rounded corners */
+	    border-radius: 8px;
+	
+	    /* Transition for smooth effects on state changes, e.g., hover */
+	    transition: box-shadow 0.3s ease;
+	
+	    /* Full width as specified */
+	    width: 100%;
+	
+	    /* Optional: Consider adding some padding for content spacing */
+	    padding: 20px;
+	
+	    /* Optional: A light background color can give a clean feel */
+	    background-color: #fff;
+	}
+	
+	/* If you want to add a hover effect to emphasize the 'floating' look */
+	.container:hover {
+	    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	    transform: translateY(-5px); /* Slight upward movement */
+	}
 
         select {
             width: 100%;
