@@ -14,7 +14,7 @@ The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless commun
 
 In November 2022, I released a YouTube video discussing AirTag spoofing. We're going to extend that to other services.
 
-> https://www.youtube.com/watch?v=m_-nMw5bzjI
+> [![](http://img.youtube.com/vi/m_-nMw5bzjI/0.jpg)](http://www.youtube.com/watch?v=m_-nMw5bzjI "Flipper Zero: Spoofing Apple's AirTags")
 
 # Bluetooth Low Energy (BLE) and ADV Packets:
 
