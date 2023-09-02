@@ -8,8 +8,6 @@ tags:
     - Bluetooth
 ---
 #  Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed
-<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' style="max-width: 100%; width: 100%; height: auto;" autoplay muted loop></video>
-
 The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless communication, has been instrumental in enabling seamless interactions between devices. Its advertising packets, in particular, are broadcast signals that devices use to announce their presence and capabilities. Apple's ecosystem, with its myriad of interconnected devices, heavily relies on these packets for functionalities ranging from AirDrop file transfers to Apple Watch connectivity.
 
 In November 2022, I released a YouTube video discussing AirTag spoofing. We're going to extend that to other services.
@@ -110,4 +108,6 @@ In that directory, the newly compiled firmware is represented by the .tgz file, 
 <img src="/img/in-post/post-js-version/annoying-apple-fans/update_flipper.PNG" width="" style="border: 1px solid black;">
 
 
-## 3. Test it out!
+## 3. Have fun!
+Here are some examples of what the notifications look like.
+<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' style="max-width: 100%; width: 100%; height: auto;" autoplay muted loop></video>
