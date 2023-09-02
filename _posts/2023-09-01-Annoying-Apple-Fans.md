@@ -83,7 +83,7 @@ I've streamlined the process for you, allowing you to effortlessly select the ty
 
 ### Updating the 'gap.c' file and then compiling the updated firmware.
 
-Copy the provided output and then update the contents within the 'gap.c' file located at the specified location.
+After your selection of notification type, copy the provided code output and then update the contents within the 'gap.c' file located at the specified location.
 
 <img src="/img/in-post/post-js-version/annoying-apple-fans/gap.c_location.PNG" width="" style="border: 1px solid black;">
 
@@ -108,6 +108,6 @@ In that directory, the newly compiled firmware is represented by the .tgz file, 
 <img src="/img/in-post/post-js-version/annoying-apple-fans/update_flipper.PNG" width="" style="border: 1px solid black;">
 
 
-## 3. Have fun!
+## Have fun!
 Here are some examples of what the notifications look like.
 <video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' style="max-width: 100%; width: 100%; height: auto;" autoplay muted loop></video>
