@@ -3,12 +3,13 @@ layout:     post
 title:      "Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed"
 date:       2023-09-01
 author:     "Tech"
-header-img: "img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4"
+header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.png"
 tags:
     - Bluetooth
 ---
 #  Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed
-header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.png"
+<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' style="max-width: 100%; width: 100%; height: auto;" autoplay muted loop></video>
+
 The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless communication, has been instrumental in enabling seamless interactions between devices. Its advertising packets, in particular, are broadcast signals that devices use to announce their presence and capabilities. Apple's ecosystem, with its myriad of interconnected devices, heavily relies on these packets for functionalities ranging from AirDrop file transfers to Apple Watch connectivity.
 
 In November 2022, I released a YouTube video discussing AirTag spoofing. We're going to extend that to other services.
@@ -55,9 +56,6 @@ Apple's ecosystem relies on BLE for many integrations and features. Here's the r
 In conclusion, ADV packets in BLE are crucial for many of Apple's features. Apple harnesses BLE advertising for efficient device communication while prioritizing user privacy and security.
 
 # Flipper Zero Bluetooth Prank Revealed
-
-<video src='/img/in-post/post-js-version/annoying-apple-fans/applevideo.mp4' width=800 autoplay muted loop></video>
-
 Enter the Flipper Zero, a multi-tool device for hackers and tinkerers. One of its capabilities is to interact with BLE protocols, and more specifically, to mimic or spoof these advertising packets.
 
 When a device like Flipper Zero mimics the advertising packets of legitimate devices or services, it can create a plethora of phantom devices in the vicinity of an iOS user. Imagine searching for a device to connect to and being presented with a list of dozens, if not hundreds, of fake device names. Or attempting an AirDrop and being flooded with fictitious recipients. It's not just a minor inconvenience; it can disrupt the seamless experience that Apple users are accustomed to.
