@@ -75,6 +75,10 @@ But why shed light on this? It's essential to note that the Flipper Zero's range
 # Here's how it's done.
 We'll be updating the Flipper Zero by altering a specific file responsible for its Bluetooth functionality, then compiling and applying the firmware update.
 
+Make sure you have enough space and clone the source code:
+
+> git clone --recursive https://github.com/flipperdevices/flipperzero-firmware.git
+
 I've streamlined the process for you, allowing you to effortlessly select the type of notification you'd like to display on nearby iOS devices.
 
 {% include flipper-BLE.html %}
