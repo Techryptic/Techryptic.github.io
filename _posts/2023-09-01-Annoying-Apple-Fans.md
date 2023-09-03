@@ -7,6 +7,10 @@ header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.p
 tags:
     - Bluetooth
 ---
+> **9/3/2023 Update:** I collaborated with the developer of the Xtreme firmware for Flipper, and together, we integrated an [FAP application](https://flipc.org/Flipper-XFW/Xtreme-Firmware?branch=dev&root=applications%2Fexternal%2Fapple_ble_spam&nowerr=1). This enhancement means there's no longer a need to compile the firmware manually.
+
+---
+
 #  Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed
 The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless communication, has been instrumental in enabling seamless interactions between devices. Its advertising packets, in particular, are broadcast signals that devices use to announce their presence and capabilities. Apple's ecosystem, with its myriad of interconnected devices, heavily relies on these packets for functionalities ranging from AirDrop file transfers to Apple Watch connectivity.
 
