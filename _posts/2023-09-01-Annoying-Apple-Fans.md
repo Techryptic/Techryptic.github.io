@@ -7,6 +7,10 @@ header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.p
 tags:
     - Bluetooth
 ---
+> **9/3/2023 Update:** Youtube Video Demo
+
+{% include youtube.html id="OWXt8oTJ1lo" %}
+
 > **9/3/2023 Update:** I collaborated with the developer of the Xtreme firmware for Flipper, and together, we integrated an [FAP application](https://flipc.org/Flipper-XFW/Xtreme-Firmware?branch=dev&root=applications%2Fexternal%2Fapple_ble_spam&nowerr=1). This enhancement means there's no longer a need to compile the firmware manually.
 
 ---
