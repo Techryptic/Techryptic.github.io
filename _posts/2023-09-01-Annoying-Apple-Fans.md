@@ -16,9 +16,7 @@ tags:
 #  Annoying Apple Fans: The Flipper Zero Bluetooth Prank Revealed
 The Bluetooth Low Energy (BLE) protocol, a cornerstone of modern wireless communication, has been instrumental in enabling seamless interactions between devices. Its advertising packets, in particular, are broadcast signals that devices use to announce their presence and capabilities. Apple's ecosystem, with its myriad of interconnected devices, heavily relies on these packets for functionalities ranging from AirDrop file transfers to Apple Watch connectivity.
 
-In November 2022, I released a YouTube video discussing AirTag spoofing. We're going to extend that to other services.
-
-> [![](http://img.youtube.com/vi/m_-nMw5bzjI/0.jpg)](http://www.youtube.com/watch?v=m_-nMw5bzjI "Flipper Zero: Spoofing Apple's AirTags")
+In November 2022, I released a [Youtube Video]([https://pages.github.com/](http://www.youtube.com/watch?v=m_-nMw5bzjI) discussing AirTag spoofing. We're going to extend that to other services.
 
 # Bluetooth Low Energy (BLE) and ADV Packets:
 
