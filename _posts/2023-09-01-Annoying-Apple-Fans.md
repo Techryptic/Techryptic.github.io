@@ -7,6 +7,8 @@ header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.p
 tags:
     - Bluetooth
 ---
+> **9/5/2023 Update:** I'd like to draw your attention to the fact that I've been addressing this matter since November 2022. Feel free to examine my Twitter or YouTube history for further information. Authors should be more diligent in fact-checking their work.
+
 > **9/5/2023 Update:** I have already submitted this to the Apple Research team, and I'd like to emphasize that.
 
 > **9/5/2023 Update:** Featured by TechCrunch, you can read it here: [Hacking device Flipper Zero can spam nearby iPhones with Bluetooth pop-ups](https://techcrunch.com/2023/09/05/flipper-zero-hacking-iphone-flood-popups/)
