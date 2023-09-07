@@ -9,7 +9,9 @@ tags:
 ---
 > **9/6/2023 Update:** I'd like to draw your attention to the fact that I've been addressing this matter since November 2022. Feel free to examine my Twitter or YouTube history for further information. Authors should be more diligent in fact-checking their work.
 
-> **9/6/2023 Update:** I have already submitted this to the Apple Research team, and I'd like to emphasize that.
+> **9/6/2023 Update:** I've already submitted this concern to the Apple Research team, and it's crucial to emphasize its significance. I propose two potential solutions for Apple, with the added benefit of reducing the threat:
+First, they should bolster the proximity RSSI check, ensuring that receiving devices establish a stronger connection with Apple devices.
+Secondly, from a technical perspective, it's worth noting that the BLE 4.0 specification has a limited payload size of only 31 bytes, which isn't sufficient for proper checksums. In contrast, the BLE 5.0 specification increases this limit to 255 bytes, allowing for more robust packet checks. Keep in mind that these values are subject to implementation specifics and may vary between different Bluetooth chipsets and devices. 
 
 > **9/5/2023 Update:** Featured by TechCrunch, you can read it here: [Hacking device Flipper Zero can spam nearby iPhones with Bluetooth pop-ups](https://techcrunch.com/2023/09/05/flipper-zero-hacking-iphone-flood-popups/)
 
