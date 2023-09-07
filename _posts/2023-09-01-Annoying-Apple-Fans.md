@@ -7,7 +7,7 @@ header-img: "img/in-post/post-js-version/annoying-apple-fans/apple-ble-annoyed.p
 tags:
     - Bluetooth
 ---
-> **9/6/2023 Update:** I'd like to draw your attention to the fact that I've been addressing this matter since November 2022. Feel free to examine my Twitter or YouTube history for further information. Authors should be more diligent in fact-checking their work.
+> **9/6/2023 Update:** I'd like to draw your attention to the fact that I've been addressing this matter since November 2022. Feel free to examine my Twitter or YouTube history for further information.
 
 > **9/6/2023 Update:** I've already submitted this concern to the Apple Research team, and it's crucial to emphasize its significance. I propose two potential solutions for Apple, with the added benefit of reducing the threat:
 First, they should bolster the proximity RSSI check, ensuring that receiving devices establish a stronger connection with Apple devices.
