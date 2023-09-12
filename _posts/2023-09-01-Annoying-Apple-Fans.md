@@ -42,9 +42,50 @@ One of the primary mechanisms by which BLE devices communicate or make their pre
 - **Non-connectable Undirected Advertising:** For devices broadcasting information without connecting, like a beacon.
 - **Scannable Undirected Advertising:** Allows a scan request from a receiving device but doesn't establish a connection.
 
+**Frequency:** Devices can adjust their ADV packet broadcast frequency, balancing power consumption against discoverability.
+
 **Data Payload:** Contains information like the device's name or services it offers.
 
-**Frequency:** Devices can adjust their ADV packet broadcast frequency, balancing power consumption against discoverability.
+### BLE Data Payload == Notifications
+
+Let's break this down using an example from capturing AirTags data, although the same principles apply to any type of notification you might want to send in a spam-like manner.
+
+In the Wireshark capture I conducted back in January, I observed that the notifications followed a standardized format, with only a few bytes distinguishing them for each type of notification. To conduct these captures, I have my own Faraday Box, which provides a controlled environment for capturing various types of notifications.
+
+<img src="/img/in-post/post-js-version/annoying-apple-fans/wireshark1.PNG" width="" style="border: 1px solid black;">
+
+In the image provided, we should focus on the Data column, highlighted in blue.
+
+Now, let's dive deeper into the analysis:
+
+<img src="/img/in-post/post-js-version/annoying-apple-fans/wireshark2.PNG" width="" style="border: 1px solid black;">
+
+
+From the image, several key points become evident. Our goal is to replicate this data to be sent by the Flipper or any other device. The data adheres to a standardized format, as previously mentioned.
+
+
+Here's a breakdown of the data:
+```c
+0x1E, // Length
+0xFF, // Type
+0x4C, 0x00, // Apple, Inc.
+
+// Now comes the Data of the AirTag packet
+0x0719050055100000014eca9189f2e68aa8c7dc1e4ac7d331ef52d3
+```
+
+From this point, you can replay it on any device, triggering a notification.
+However, for consistency, we can perform some data cleanup.
+Like all Apple BLE Notifications, AirTag data follows a structured format, and by starting from the end and zeroing out two bytes at a time, we can identify which ones are unnecessary.
+
+I've written a script to handle this, but in essence, we realize that approximately 90% of the data in the packet is redundant.
+
+```c
+0x0719050055100000014eca9189f2e68aa8c7dc1e4ac7d331ef52d3 // AirTag with Capture Data
+0x071905005500000000000000000000000000000000000000000000 // AirTag with only the essential hex data required for the notification to pop.
+```
+
+For other types of notifications, the process follows a similar pattern. An event is triggered on the device, and the corresponding BLE data can be captured. This data can be easily replicated by copying it and, if desired, trimming away any unnecessary portions. **It's worth noting that this standardized format, serving as a signature of the BLE packet, remains consistent across all devices, ensuring accessibility for everyone within the Apple Ecosystem.**
 
 
 # Implications for Apple
