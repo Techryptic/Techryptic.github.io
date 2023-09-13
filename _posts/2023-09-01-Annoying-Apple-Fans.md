@@ -46,7 +46,7 @@ One of the primary mechanisms by which BLE devices communicate or make their pre
 
 **Data Payload:** Contains information like the device's name or services it offers.
 
-### BLE Data Payload == Notifications
+### Data Payload Notifications
 
 Let's break this down using an example from capturing AirTags data, although the same principles apply to any type of notification you might want to send in a spam-like manner.
 
